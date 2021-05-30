@@ -1,0 +1,51 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: linear-gradient(to right, #757575, #000000);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    font-family: sans-serif;
+}
+
+.loading {
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 8rem;
+    line-height: 110px;
+}
+
+.wave {
+    background: url("img.jpg");
+    -webkit-background-clip: text;
+    color: transparent;
+    background-size: 200px 100px;
+    background-repeat: repeat-x;
+    animation: wave-animation 1s infinite linear,
+        loading-animation 3s infinite linear alternate;
+}
+
+@keyframes loading-animation {
+    0% {
+        background-size: 200px 0px;
+    }
+
+    100% {
+        background-size: 200px 200px;
+    }
+}
+
+@keyframes wave-animation {
+    0% {
+        background-position: 0 bottom;
+    }
+
+    100% {
+        background-position: 200px bottom;
+    }
+}
